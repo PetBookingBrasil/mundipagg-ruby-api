@@ -264,7 +264,7 @@ module Mundipagg
 			creditCardRequest.creditCardTransactionCollection.each do |transaction|
 
 				if environment == :test
-					transaction.paymentMethodCode = 1 # Simulator payment code
+					transaction.paymentMethodCode = "1" # Simulator payment code
 				end
 
 				transaction_hash = if transaction.instantBuyKey
@@ -343,7 +343,6 @@ module Mundipagg
 				level = :error
 				enable_log = false
 			end
-
 
 			client = Savon.client do
 				wsdl url
