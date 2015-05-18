@@ -345,8 +345,8 @@ module Mundipagg
 
 			client = Savon.client do
 				wsdl url
-				# log enable_log
-				# log_level level
+				log enable_log
+				log_level level
 				filters filters
 				namespaces 'xmlns:mun' => 'http://schemas.datacontract.org/2004/07/MundiPagg.One.Service.DataContracts'
 			end
